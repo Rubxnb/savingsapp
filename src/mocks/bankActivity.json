@@ -1,0 +1,22 @@
+{
+  "bankActivity" : [
+    {
+      "type": "restaurant",
+      "money": 30,
+      "date": "01/07/2024",
+      "description": null
+    },
+    {
+      "type": "salary",
+      "money": 1200,
+      "date": "02/07/2024",
+      "description": "Tus muerto perro sanxe"
+    },
+    {
+      "type": "transfer",
+      "money": 100,
+      "date": "03/07/2024",
+      "description": "Tus muerto perro sanxe"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "activityTypeList": [
+    {
+      "type": "restaurant",
+      "label": "Restaurantes",
+      "icon": "RestaurantIcon",
+      "action": "expense"
+    },
+    {
+      "type": "supermarket",
+      "label": "Supermercados",
+      "icon": "LocalGroceryStoreIcon",
+      "action": "expense"
+    },
+    {
+      "type": "store",
+      "label": "Tiendas",
+      "icon": "ShoppingBagIcon",
+      "action": "expense"
+    },
+    {
+      "type": "rent",
+      "label": "Alquiler",
+      "icon": "ApartmentIcon",
+      "action": "expense"
+    },
+    {
+      "type": "receipt",
+      "label": "Recibos",
+      "icon": "ReceiptLongIcon",
+      "action": "expense"
+    },
+    {
+      "type": "salary",
+      "label": "Nómina",
+      "icon": "AccountBalanceIcon",
+      "action": "income"
+    },
+    {
+      "type": "transfer",
+      "label": "Bizum/Transferencia",
+      "icon": "AddCardIcon",
+      "action": "income"
+    }
+  ]
+}
