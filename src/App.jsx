@@ -21,7 +21,7 @@ function App() {
         <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Badge</span>
         <span className="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">Badge</span>
         <p className="text-3xl font-bold underline ">
-      Hello world!
+          Hello world!
         </p>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -31,12 +31,12 @@ function App() {
         </a>
       </div>
       <MyGoals>
-        <p 
+        <p
           className="text-3xl font-bold underline">HOLA MUNDO</p>
         <div className="card">
           <button onClick={() => setCount((count) => count + 1)}>
             count is {count}
-          </button> 
+          </button>
           <p>
             Edit <code>src/App.jsx</code> and save to test HMR
           </p>
@@ -62,7 +62,7 @@ function App() {
             }}
             onClick={() => setIsOpen(!isOpen)}
           >
-          Click me to see my content
+            Click me to see my content
             <svg
               key="exclude"
               style={{
@@ -94,28 +94,28 @@ function App() {
               }}
             >
               <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              gravida lobortis sem, vel blandit dolor ultrices nec. Donec
-              dapibus tellus ut libero sagittis, a pharetra eros placerat.
-              Aliquam erat volutpat. Nunc nec nisl ac turpis semper pharetra.
-              Nullam pulvinar pellentesque mauris, sit amet tincidunt nisl
-              convallis id.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                gravida lobortis sem, vel blandit dolor ultrices nec. Donec
+                dapibus tellus ut libero sagittis, a pharetra eros placerat.
+                Aliquam erat volutpat. Nunc nec nisl ac turpis semper pharetra.
+                Nullam pulvinar pellentesque mauris, sit amet tincidunt nisl
+                convallis id.
               </div>
               <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              gravida lobortis sem, vel blandit dolor ultrices nec. Donec
-              dapibus tellus ut libero sagittis, a pharetra eros placerat.
-              Aliquam erat volutpat. Nunc nec nisl ac turpis semper pharetra.
-              Nullam pulvinar pellentesque mauris, sit amet tincidunt nisl
-              convallis id.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                gravida lobortis sem, vel blandit dolor ultrices nec. Donec
+                dapibus tellus ut libero sagittis, a pharetra eros placerat.
+                Aliquam erat volutpat. Nunc nec nisl ac turpis semper pharetra.
+                Nullam pulvinar pellentesque mauris, sit amet tincidunt nisl
+                convallis id.
               </div>
               <div>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              gravida lobortis sem, vel blandit dolor ultrices nec. Donec
-              dapibus tellus ut libero sagittis, a pharetra eros placerat.
-              Aliquam erat volutpat. Nunc nec nisl ac turpis semper pharetra.
-              Nullam pulvinar pellentesque mauris, sit amet tincidunt nisl
-              convallis id.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                gravida lobortis sem, vel blandit dolor ultrices nec. Donec
+                dapibus tellus ut libero sagittis, a pharetra eros placerat.
+                Aliquam erat volutpat. Nunc nec nisl ac turpis semper pharetra.
+                Nullam pulvinar pellentesque mauris, sit amet tincidunt nisl
+                convallis id.
               </div>
             </div>
           )}
