@@ -8,6 +8,7 @@ export function UserDataCard() {
 
   const [userData] = useState(initialUserData);
   const [name, setName] = useState('');
+  
   useEffect(() => {
     const alias = userData.alias[Math.floor(Math.random() * ((userData.alias.length - 1) - 0 + 1)) + 0];
     setName(`${userData.name} "${alias}" ${userData.surname}`);
@@ -15,14 +16,16 @@ export function UserDataCard() {
   
   return (
     <div>
-      <Card 
+      <Card
         sx={{
-          maxWidth: '40rem'
+          maxWidth: '40rem',
+          borderRadius: '16px',
+          boxShadow: '3'
         }}>
         <CardContent>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <Typography variant="h5">{name}</Typography>
+              <Typography variant="h6">{name}</Typography>
             </Grid>
             <Grid item xs={12}>
               <Typography variant="h3">{userData.totalMoney}€</Typography>
