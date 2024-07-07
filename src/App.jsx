@@ -1,7 +1,7 @@
 import './styles/App.css';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Box, CssBaseline } from '@mui/material';
-import { UserDataCard, PieChartCard } from './components';
+import { Box, CssBaseline, Stack } from '@mui/material';
+import { UserDataCard, PieChartCard, BankActivity } from './components';
 
 /* const darkTheme = createTheme({
   palette: {
@@ -20,14 +20,18 @@ function App() {
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
-      <Box className="w-fit"
-        sx={{
-          display: 'flex',
-          gap: '1rem'
-        }}>
-        <UserDataCard/>
-        <PieChartCard/>
-      </Box>
+      <Stack direction='column' spacing={2} justifyContent='center' alignItems='center'>
+        <Box className="w-fit"
+          sx={{
+            display: 'flex',
+            gap: '1rem'
+          }}>
+          <UserDataCard />
+          <PieChartCard />
+        </Box>
+        <BankActivity />
+      </Stack>
+
     </ThemeProvider>
   );
 }
