@@ -21,13 +21,15 @@ function App() {
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
       <Stack direction='column' spacing={2} justifyContent='center' alignItems='center'>
-        <Box className="w-fit"
+        <Box 
           sx={{
             display: 'flex',
-            gap: '1rem'
+            gap: '1rem',
+            flexGrow: 1,
+            flexFlow: 'row-gap'
           }}>
           <UserDataCard />
-          <PieChartCard />
+          {/* <PieChartCard /> */}
         </Box>
         <BankActivity />
       </Stack>
