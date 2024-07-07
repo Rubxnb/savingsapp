@@ -1,14 +1,16 @@
 {
-  "id": 1234,
-  "name": "Sergio",
-  "surname": "Álvarez Botella",
-  "alias": [
-    "Malaguita",
-    "Prosti",
-    "PC-Cleaner",
-    "El futuro ingeniero"
-  ],
-  "totalMoney": 12000,
-  "expenses": 500,
-  "income": 1500
+  "userData": {
+    "id": 1234,
+    "name": "Sergio",
+    "surname": "Álvarez Botella",
+    "alias": [
+      "Malaguita",
+      "Prosti",
+      "PC-Cleaner",
+      "El futuro ingeniero"
+    ],
+    "totalMoney": 12000,
+    "expenses": 500,
+    "income": 1500
+  }
 }
