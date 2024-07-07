@@ -4,6 +4,7 @@
       "id": 1,
       "type": "restaurant",
       "money": 30,
+      "total": 1500,
       "date": "01/07/2024",
       "description": ""
     },
@@ -11,6 +12,7 @@
       "id": 2,
       "type": "salary",
       "money": 1200,
+      "total": 1500,
       "date": "02/07/2024",
       "description": "Tus muerto perro sanxe"
     },
@@ -18,6 +20,31 @@
       "id": 3,
       "type": "transfer",
       "money": 100,
+      "total": 1500,
+      "date": "03/07/2024",
+      "description": "Tus muerto perro sanxe"
+    },
+    {
+      "id": 4,
+      "type": "restaurant",
+      "money": 30,
+      "total": 1500,
+      "date": "01/07/2024",
+      "description": ""
+    },
+    {
+      "id": 5,
+      "type": "salary",
+      "money": 1200,
+      "total": 1500,
+      "date": "02/07/2024",
+      "description": "Tus muerto perro sanxe"
+    },
+    {
+      "id": 6,
+      "type": "transfer",
+      "money": 100,
+      "total": 1500,
       "date": "03/07/2024",
       "description": "Tus muerto perro sanxe"
     }

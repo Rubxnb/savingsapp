@@ -1,18 +1,10 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import RestaurantIcon from '@mui/icons-material/Restaurant';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import AddCardIcon from '@mui/icons-material/AddCard';
-
-import { activityTypeList } from '../mocks/activityTypeList.json';
-import { BankActivityContext } from '../context/bankActivity';
 import { useContext } from 'react';
+import { BankActivityContext } from '../context/bankActivity';
+import { Card, CardContent, Typography, Box, Grid, Stack } from '@mui/material';
+import { RestaurantIcon, AddCardIcon, AccountBalanceIcon } from '../assets/icons';
+import { activityTypeList } from '../mocks/activityTypeList.json';
 
 export default function BankActivity() {
-
   const { bankActivity } = useContext(BankActivityContext);
 
   const sortedBankActivities = [...bankActivity].sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -27,42 +19,58 @@ export default function BankActivity() {
     'salary': <AccountBalanceIcon />
   };
 
+  // Funcion para renderizar las actividades bancarias del .json
+  function renderBankActivity(bankActivity) {
+    const activityInfo = getActivityInfo(bankActivity.type);
+
+    return (
+      <Grid key={bankActivity.id} item xs={12}>
+        <Card variant="elevation" sx={{ borderRadius: 2, width: 'auto' }}>
+          <CardContent
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              paddingLeft: 5,
+              justifyContent: 'space-between'
+            }}>
+            <Stack>
+              <Stack direction='row' alignItems='center'>
+                {icons[bankActivity.type]}
+                <Typography variant="h6" component="div" sx={{ color: '#007fff', ml: 2 }}>
+                  <strong>{activityInfo.label}</strong>
+                </Typography>
+              </Stack>
+              <Typography variant="p" sx={{ textAlign: 'left' }}>
+                {bankActivity.description}
+              </Typography>
+            </Stack>
+            <Stack direction='column' alignItems='flex-end' ml={2}>
+              {activityInfo && activityInfo.action === 'expense' ? (
+                <Typography variant="h5" sx={{ color: '#cd5c5c' }}>
+                  - {bankActivity.money}€
+                </Typography>
+              ) : (
+                <Typography variant="h5">
+                  {bankActivity.money}€
+                </Typography>
+              )}
+              <Typography variant="p" sx={{ color: 'grey' }}>
+                {bankActivity.total}€
+              </Typography>
+            </Stack>
+          </CardContent>
+          <CardContent sx={{ display: 'flex', paddingLeft: 5 }}>
+            <Typography variant="subtitle1">{bankActivity.date}</Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+    );
+  }
+
   return (
     <main className='bankActivities'>
-      <Grid container spacing={2}>
-        {sortedBankActivities.map((bankActivity) => {
-
-          const activityInfo = getActivityInfo(bankActivity.type);
-
-          return (
-            <Grid key={bankActivity.id} item xs={12}>
-              <Card variant="elevation" sx={{ borderRadius: 2, width: '100%' }}>
-                <CardContent sx={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', paddingLeft: 5 }}>
-                  <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
-                      {icons[bankActivity.type]}
-                      <Typography variant="h5" component="div" sx={{ color: '#007fff', ml: 2 }}>
-                        <strong>{activityInfo.label}</strong>
-                      </Typography>
-                    </Box>
-                    <Typography variant="h6" sx={{ textAlign: 'left', marginTop: 2 }}>{bankActivity.description}</Typography>
-                  </Box>
-                  <Box sx={{ display: 'flex', alignSelf: 'center', marginLeft: 'auto' }}>
-                    {activityInfo && activityInfo.action === 'expense' ? (
-                      <Typography variant="h4" sx={{ color: '#cd5c5c' }}> - {bankActivity.money}€</Typography>
-                    ) : (
-                      <Typography variant="h4"> {bankActivity.money}€</Typography>
-                    )}
-
-                  </Box>
-                </CardContent>
-                <CardContent sx={{ display: 'flex', flexDirection: 'row', marginTop: 2, paddingLeft: 5 }}>
-                  <Typography variant="subtitle1">{bankActivity.date}</Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          );
-        })}
+      <Grid container spacing={2} sx={{ maxWidth: '50rem' }}>
+        {sortedBankActivities.map(renderBankActivity)}
       </Grid>
     </main>
   );
