@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
 import { userData as initialUserData} from '../mocks/userData.json';
 import { Card, CardContent, Grid, Stack, Typography } from '@mui/material';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import { ArrowUpwardIcon, ArrowDownwardIcon } from '../assets/icons';
 
-export function UserDataCard() {
+export default function UserDataCard() {
 
   const [userData] = useState(initialUserData);
   const [name, setName] = useState('');
@@ -13,7 +12,7 @@ export function UserDataCard() {
     const alias = userData.alias[Math.floor(Math.random() * ((userData.alias.length - 1) - 0 + 1)) + 0];
     setName(`${userData.name} "${alias}" ${userData.surname}`);
   }, []);
-  
+
   return (
     <div>
       <Card
