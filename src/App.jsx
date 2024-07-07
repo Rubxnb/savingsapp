@@ -3,6 +3,8 @@ import viteLogo from '/vite.svg';
 import { MyGoals } from './components/MyGoals';
 import './App.css';
 import { ButtonGroup, Button, InputLabel, Select, MenuItem } from '@mui/material';
+import { bankActivities } from './mocks/bankActivities.json';
+import { BankActivity } from './components/BankActivity';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +15,8 @@ function App() {
   };
   return (
     <>
+      <BankActivity bankActivities={bankActivities} />
+
       <div>
         <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">Badge</span>
         <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">Badge</span>
@@ -30,6 +34,9 @@ function App() {
           <img src={viteLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+
+
+
       <MyGoals>
         <p
           className="text-3xl font-bold underline">HOLA MUNDO</p>
