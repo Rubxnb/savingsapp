@@ -1,7 +1,7 @@
 import './styles/App.css';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Box, CssBaseline, Stack } from '@mui/material';
-import { UserDataCard, PieChartCard, BankActivity } from './components';
+import { UserDataCard, BankActivity } from './components';
 
 /* const darkTheme = createTheme({
   palette: {

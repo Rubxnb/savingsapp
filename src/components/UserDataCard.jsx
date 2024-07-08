@@ -11,7 +11,7 @@ export default function UserDataCard() {
   useEffect(() => {
     const alias = userData.alias[Math.floor(Math.random() * ((userData.alias.length - 1) - 0 + 1)) + 0];
     setName(`${userData.name} "${alias}" ${userData.surname}`);
-  }, []);
+  }, [userData]);
 
   return (
     <div>
@@ -45,7 +45,7 @@ export default function UserDataCard() {
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
-                color="red"
+                color="#cd5c5c"
               >
                 <ArrowDownwardIcon fontSize="large"/>
                 <Typography variant="h4">{userData.expenses}€</Typography>
