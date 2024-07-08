@@ -1,8 +1,7 @@
 import './styles/App.css';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Box, CssBaseline, Stack, Button } from '@mui/material';
+import { Box, CssBaseline, Stack } from '@mui/material';
 import { UserDataCard, BankActivity } from './components';
-import { insertMovement } from './services/supabase/bankMovement';
 
 /* const darkTheme = createTheme({
   palette: {
@@ -15,24 +14,12 @@ const lightTheme = createTheme({
     mode: 'light',
   },
 });
-const movement = {
-  type: 'salary',
-  money: 1200,
-  total: 1500,
-  description: 'Tus muerto perro sanxe'
-};
 
-const click = async () => {
-  await insertMovement(movement);
-}
 function App() {
 
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
-      <Button onClick={click}>
-        ADD MOVEMENT
-      </Button>
       <Stack direction='column' spacing={2} justifyContent='center' alignItems='center'>
         <Box 
           sx={{
