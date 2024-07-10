@@ -22,7 +22,6 @@ export default function AppBarComponent() {
             marginLeft: '1rem'
           }} 
           src='/src/assets/appIcon.png'
-            
         />
         <Box component="div" sx={{ flexGrow: 1}}></Box>
         
