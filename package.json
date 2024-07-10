@@ -15,6 +15,7 @@
     "@mui/icons-material": "^5.16.0",
     "@mui/material": "^5.16.0",
     "@mui/x-charts": "^7.9.0",
+    "@supabase/supabase-js": "^2.44.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-magic-motion": "^1.1.2",

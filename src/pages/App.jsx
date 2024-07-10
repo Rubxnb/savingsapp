@@ -1,4 +1,3 @@
-import '../styles/App.css';
 import { AppBarComponent, NavigationDrawer } from '../components';
 import { ThemeProvider } from '@mui/material/styles';
 import { Box, CssBaseline} from '@mui/material';
