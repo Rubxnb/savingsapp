@@ -24,10 +24,10 @@ export default function UserDataCard() {
         <CardContent>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <Typography variant="h6">{name}</Typography>
+              <Typography variant="h6" textAlign='center'>{name}</Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography variant="h3">{userData.totalMoney}€</Typography>
+              <Typography variant="h3" textAlign='center'>{userData.totalMoney}€</Typography>
             </Grid>
             <Grid item xs={6}>
               <Stack
