@@ -1,5 +1,7 @@
 import { createTheme } from '@mui/material';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
+
+export const ThemeContext = createContext();
 
 const darkTheme = createTheme({
   palette: {
@@ -18,12 +20,17 @@ const THEMES = {
   DARK: darkTheme
 };
 
-export function useThemeHook() {
+export function ThemeContextProvider({ children }) {
+
   const [theme, setTheme] = useState(lightTheme);
-  
+
   const toggleTheme = (newTheme) => {
     setTheme(newTheme === THEMES.LIGHT ? lightTheme : darkTheme);
   };
 
-  return {currentTheme: theme, toggleTheme, THEMES};
+  return (
+    <ThemeContext.Provider value={{ currentTheme: theme, toggleTheme, THEMES }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }

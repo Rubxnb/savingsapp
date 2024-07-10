@@ -1,5 +1,6 @@
 import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import ThemeSwitch from './ThemeSwitch';
 
 export default function AppBarComponent() {
   return (
@@ -17,6 +18,7 @@ export default function AppBarComponent() {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
         </Typography>
+        <ThemeSwitch />
         <Button color="inherit">Login</Button>
       </Toolbar>
     </AppBar>

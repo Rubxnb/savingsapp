@@ -4,10 +4,13 @@ import { ThemeProvider } from '@mui/material/styles';
 import { Box, CssBaseline} from '@mui/material';
 import { RouterProvider } from 'react-router-dom';
 import router from './routes';
-import { useThemeHook } from './hooks/useThemeHook';
+import { ThemeContext } from './context/themeContect';
+import { useContext } from 'react';
 
 function App() {
-  const { currentTheme } = useThemeHook();
+  
+  const { currentTheme } = useContext(ThemeContext);
+  
   return (
     <ThemeProvider theme={currentTheme}>
       <CssBaseline />
