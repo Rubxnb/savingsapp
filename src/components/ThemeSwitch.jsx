@@ -1,6 +1,6 @@
 import { Box, FormControlLabel, Switch } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from '../context/themeContect';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
@@ -53,14 +53,22 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 export default function ThemeSwitch() {
   
-  const {currentTheme, toggleTheme, THEMES} = useContext(ThemeContext);
+  const { currentTheme, toggleTheme, THEMES } = useContext(ThemeContext);
+  const [ switchState, setSwitchState ] = useState(false);
+
+  useEffect(() => {
+    setSwitchState(currentTheme === THEMES.DARK);
+  }
+  , [currentTheme]);
+  
   return (
     <Box>
       <FormControlLabel
+        checked={switchState}
         control={<MaterialUISwitch sx={{ m: 1 }}/>}
-        onChange={() => {toggleTheme(
-          currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT
-        );}}
+        onChange={() => {
+          toggleTheme(currentTheme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT);
+        }}
       />
     </Box>);
   
