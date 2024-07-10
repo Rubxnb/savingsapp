@@ -7,10 +7,23 @@ export default function AppBarComponent() {
     <AppBar 
       sx={{background: '#5cb183'}}>
       <Toolbar>
-        <Typography variant="h4" sx={{marginLeft: '3rem', color: '#D71869', fontWeight: 'bold'}}>
+        <Typography 
+          variant="h4" 
+          sx={{
+            marginLeft: '3rem', 
+            color: '#D71869', 
+            fontWeight: 'bold'
+          }}>
         Savings App
         </Typography>
-        <img style={{width: '50px', marginLeft: '1rem'}} src='/src/assets/appIcon.png'/>
+        <img 
+          style={{
+            width: '50px', 
+            marginLeft: '1rem'
+          }} 
+          src='/src/assets/appIcon.png'
+            
+        />
         <Box component="div" sx={{ flexGrow: 1}}></Box>
         
         <Avatar xs={{ bgcolor: green[500]}}>
