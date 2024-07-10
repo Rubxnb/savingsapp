@@ -1,10 +1,10 @@
-import './styles/App.css';
-import { AppBarComponent, NavigationDrawer } from './components';
+import '../styles/App.css';
+import { AppBarComponent, NavigationDrawer } from '../components';
 import { ThemeProvider } from '@mui/material/styles';
 import { Box, CssBaseline} from '@mui/material';
 import { RouterProvider } from 'react-router-dom';
-import router from './routes';
-import { ThemeContext } from './context/themeContect';
+import router from '../routes';
+import { ThemeContext } from '../context/themeContect';
 import { useContext } from 'react';
 
 function App() {

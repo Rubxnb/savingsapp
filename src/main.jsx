@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
+import App from './pages/App.jsx';
 import { BankActivityProvider } from './context/bankActivity.jsx';
 import { ThemeContextProvider } from './context/themeContect.jsx';
 
