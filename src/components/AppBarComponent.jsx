@@ -16,7 +16,7 @@ export default function AppBarComponent() {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            Savings App
         </Typography>
         <ThemeSwitch />
         <Button color="inherit">Login</Button>
