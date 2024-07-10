@@ -1,26 +1,15 @@
 import './styles/App.css';
 import { AppBarComponent, NavigationDrawer } from './components';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import { Box, CssBaseline} from '@mui/material';
 import { RouterProvider } from 'react-router-dom';
 import router from './routes';
-
-/* const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-}); */
-
-const lightTheme = createTheme({
-  palette: {
-    mode: 'light',
-  },
-});
-
+import { useThemeHook } from './hooks/useThemeHook';
 
 function App() {
+  const { currentTheme } = useThemeHook();
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={currentTheme}>
       <CssBaseline />
       <AppBarComponent />
       <NavigationDrawer />
