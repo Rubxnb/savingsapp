@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { userData as initialUserData} from '../mocks/userData.json';
 import { Card, CardContent, Grid, Stack, Typography } from '@mui/material';
 import { ArrowUpwardIcon, ArrowDownwardIcon } from '../assets/icons';
@@ -6,25 +6,19 @@ import { ArrowUpwardIcon, ArrowDownwardIcon } from '../assets/icons';
 export default function UserDataCard() {
 
   const [userData] = useState(initialUserData);
-  const [name, setName] = useState('');
-  
-  useEffect(() => {
-    const alias = userData.alias[Math.floor(Math.random() * ((userData.alias.length - 1) - 0 + 1)) + 0];
-    setName(`${userData.name} "${alias}" ${userData.surname}`);
-  }, [userData]);
 
   return (
     <div>
       <Card
         sx={{
-          maxWidth: '40rem',
+          maxWidth: '25rem',
           borderRadius: '16px',
           boxShadow: '3'
         }}>
         <CardContent>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <Typography variant="h6" textAlign='center'>{name}</Typography>
+              <Typography variant="h6" textAlign='center'>{userData.name} {userData.surname}</Typography>
             </Grid>
             <Grid item xs={12}>
               <Typography variant="h3" textAlign='center'>{userData.totalMoney}€</Typography>

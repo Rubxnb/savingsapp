@@ -23,13 +23,11 @@ export default function PieChartCard() {
   return(
     <Card 
       sx={{
+        maxWidth: '25rem',
         borderRadius: '16px',
         boxShadow: '3'
       }}>
-      <CardContent
-        sx={{
-          width: '25rem'
-        }}>
+      <CardContent>
         <PieChart
           series={[
             {

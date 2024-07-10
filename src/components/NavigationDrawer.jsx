@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, styled } from '@mui/material';
+import { List, ListItem, ListItemButton, ListItemIcon, ListItemText, styled } from '@mui/material';
 import MuiDrawer from '@mui/material/Drawer';
 import InboxIcon from '@mui/icons-material/Inbox';
 import MailIcon from '@mui/icons-material/Mail';
@@ -72,31 +72,7 @@ export default function NavigationDrawer() {
                   minWidth: 0,
                   mr: open ? 3 : 'auto',
                   justifyContent: 'center',
-                }}
-              >
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-            <ListItemButton
-              sx={{
-                minHeight: 48,
-                justifyContent: open ? 'initial' : 'center',
-                px: 2.5,
-              }}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: open ? 3 : 'auto',
-                  justifyContent: 'center',
+                  color: '#5cb183'
                 }}
               >
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}

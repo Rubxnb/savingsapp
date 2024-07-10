@@ -1,25 +1,21 @@
-import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import ThemeSwitch from './ThemeSwitch';
+import { AppBar, Avatar, Box, Toolbar, Typography } from '@mui/material';
+import { PersonIcon } from '../assets/icons';
+import { green } from '@mui/material/colors';
 
 export default function AppBarComponent() {
   return (
-    <AppBar>
+    <AppBar 
+      sx={{background: '#5cb183'}}>
       <Toolbar>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Savings App
+        <Typography variant="h4" sx={{marginLeft: '3rem', color: '#D71869', fontWeight: 'bold'}}>
+        Savings App
         </Typography>
-        <ThemeSwitch />
-        <Button color="inherit">Login</Button>
+        <img style={{width: '50px', marginLeft: '1rem'}} src='/src/assets/appIcon.png'/>
+        <Box component="div" sx={{ flexGrow: 1}}></Box>
+        
+        <Avatar xs={{ bgcolor: green[500]}}>
+          <PersonIcon xs={{size:'30px'}}/>
+        </Avatar>
       </Toolbar>
     </AppBar>
   );

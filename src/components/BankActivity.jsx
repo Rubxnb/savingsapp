@@ -3,6 +3,7 @@ import { BankActivityContext } from '../context/bankActivity';
 import { Card, CardContent, Typography, Grid, Stack } from '@mui/material';
 import { RestaurantIcon, AddCardIcon, AccountBalanceIcon } from '../assets/icons';
 import { activityTypeList } from '../mocks/activityTypeList.json';
+import '../styles/BankActivity.css';
 
 export default function BankActivity() {
   const { bankActivity } = useContext(BankActivityContext);
@@ -25,8 +26,8 @@ export default function BankActivity() {
     const activityInfo = getActivityInfo(bankActivity.type);
 
     return (
-      <Grid key={bankActivity.id} item xs={12}>
-        <Card 
+      <Grid key={bankActivity.id} item xs={12} sx={{ paddingTop: '0.5rem' }}>
+        <Card className='movement__card'
           sx={{ 
             borderRadius: '16px',
             boxShadow: '3',
@@ -47,7 +48,7 @@ export default function BankActivity() {
                       <b>{activityInfo.label}</b>
                     </Typography>
                   </Stack>
-                  <Typography variant="p">
+                  <Typography variant="subtitle2">
                     {bankActivity.description}
                   </Typography>
                 </Stack>
@@ -61,7 +62,7 @@ export default function BankActivity() {
                       {bankActivity.money}€
                     </Typography>
                   )}
-                  <Typography variant="p" sx={{ color: 'grey' }}>
+                  <Typography variant="subtitle2" sx={{ color: 'grey' }}>
                     {bankActivity.total}€
                   </Typography>
                 </Stack>
@@ -76,7 +77,7 @@ export default function BankActivity() {
 
   return (
     <main className='bankActivities'>
-      <Grid container spacing='1rem' sx={{ maxWidth: '50rem' }}>
+      <Grid container sx={{ maxWidth: '50rem' }}>
         {sortedBankActivities && sortedBankActivities.map(renderBankActivity)}
       </Grid>
     </main>
